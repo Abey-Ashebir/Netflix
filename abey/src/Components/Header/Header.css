@@ -1,0 +1,82 @@
+/* Outer container for the header */
+.outer-container {
+    display: flex; /* Correct 'flexbox' to 'flex' */
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #141414; /* Dark background color for Netflix-like design */
+    position: sticky;
+    top: 0; /* Keep the header fixed at the top when scrolling */
+    z-index: 1000; /* Higher stacking order */
+  }
+  
+  /* Header container */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Left side of the header (navigation) */
+  .header-left ul,
+  .header-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* List items in the header-left section */
+  .header-left ul li {
+    margin-right: 20px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .header-left ul li img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .header-left ul li:hover {
+    cursor: pointer;
+    color: #e50914; /* Netflix red for hover effect */
+  }
+  
+  /* Right side icons */
+  .header-right ul li {
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .header-right ul li:hover {
+    cursor: pointer;
+    color: #e50914;
+  }
+  
+  /* Icon sizing */
+  .header-right ul li svg {
+    font-size: 24px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header-left ul,
+    .header-right ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header-left ul li,
+    .header-right ul li {
+      margin: 10px 0;
+    }
+  }
+  
